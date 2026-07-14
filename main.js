@@ -11,14 +11,9 @@ function adicionaDisco(pino, tam){
 }
 
 function selecionaDisco(pino){
-    if(discoSelecionado === null){
-        discoSelecionado = pino.querySelector(":last-child");
-        pino.removeChild(pino.lastChild);
-        console.log("O disco " + discoSelecionado.textContent + " foi selecionado.");
-        ilustraDiscoSelecionado.appendChild(discoSelecionado);
-    } else {
-        console.log("discoSelecionado não null.")
-    }
+    discoSelecionado = pino.querySelector(":last-child");
+    pino.removeChild(pino.lastChild);
+    ilustraDiscoSelecionado.appendChild(discoSelecionado);
 }
 
 function registraJogada(pino){
@@ -37,10 +32,28 @@ function registraJogada(pino){
     lista.appendChild(li);
 }
 
+function realizaJogada(pino){
+    if(discoSelecionado != null){   
+        if(pino.querySelector(":last-child") === null || pino.querySelector(":last-child").getAttribute("tamanho") < discoSelecionado.getAttribute("tamanho")){
+            pino.appendChild(discoSelecionado);
+            registraJogada(pino);
+            discoSelecionado = null;
+        }
+
+    }
+}
+
 for(let i = 1; i <= 8; i++){
     adicionaDisco(pinos[0], i);
 }
 
-pinos[0].addEventListener("click", () => selecionaDisco(pinos[0]));
-pinos[1].addEventListener("click", () => selecionaDisco(pinos[1]));
-pinos[2].addEventListener("click", () => selecionaDisco(pinos[2]));
+pinos.forEach((pino) => {pino.addEventListener("click", (e) => {e.stopPropagation();
+    if(discoSelecionado === null){
+        if (pino.lastElementChild != null){
+            selecionaDisco(pino);
+        }
+    } else{
+        realizaJogada(pino);
+        }
+    });
+});
