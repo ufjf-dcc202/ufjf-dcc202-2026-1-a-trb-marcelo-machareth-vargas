@@ -46,6 +46,9 @@ function realizaJogada(pino){
 
 function repeteJogadas(){
     repeticaoEmAndamento = true;
+    while(ilustraDiscoSelecionado.firstChild != null){
+        ilustraDiscoSelecionado.removeChild(ilustraDiscoSelecionado.firstChild);
+    }
     pinos.forEach((pino, indice) => {
         while(pino.firstChild != null){
             pino.removeChild(pino.firstChild);
@@ -96,7 +99,7 @@ function repeteJogadas(){
         setTimeout(() => {jogada.style.color = "black";}, 1000);
         }, (indice+1)*1000)
     })
-    setTimeout(() => {repeticaoEmAndamento = false;}, jogadas.length * 1000);
+    setTimeout(() => {repeticaoEmAndamento = false;discoSelecionado = null;}, jogadas.length * 1000);
 }
 
 function inicializaPino1(){
