@@ -1,5 +1,6 @@
 const pinos = document.querySelectorAll(".pino");
 const lista = document.querySelector("ol");
+const ilustraDiscoSelecionado = document.querySelector(".discoSelecionado");
 let discoSelecionado = null;
 
 function adicionaDisco(pino, tam){
@@ -14,6 +15,7 @@ function selecionaDisco(pino){
         discoSelecionado = pino.querySelector(":last-child");
         pino.removeChild(pino.lastChild);
         console.log("O disco " + discoSelecionado.textContent + " foi selecionado.");
+        ilustraDiscoSelecionado.appendChild(discoSelecionado);
     } else {
         console.log("discoSelecionado não null.")
     }
