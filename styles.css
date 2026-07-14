@@ -12,3 +12,44 @@
     border-style: solid;
     padding: 0.5%;
 }
+[tamanho="1"]{
+    background-color: red;
+    width: 95%;
+    height: 1em;
+}
+
+[tamanho="2"]{
+    background-color: green;
+    width: 85%;
+    height: 1em;
+}
+[tamanho="3"]{
+    background-color: blue;
+    width: 75%;
+    height: 1em;
+}
+[tamanho="4"]{
+    background-color: cyan;
+    width: 65%;
+    height: 1em;
+}
+[tamanho="5"]{
+    background-color: yellow;
+    width: 55%;
+    height: 1em;
+}
+[tamanho="6"]{
+    background-color: magenta;
+    width: 45%;
+    height: 1em;
+}
+[tamanho="7"]{
+    background-color: olive;
+    width: 35%;
+    height: 1em;
+}
+[tamanho="8"]{
+    background-color: indigo;
+    width: 25%;
+    height: 1em;
+}
