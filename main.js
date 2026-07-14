@@ -103,7 +103,7 @@ function repeteJogadas(){
         setTimeout(() => {jogada.style.color = "black";}, 1000);
         }, (indice+1)*1000)
     })
-    setTimeout(() => {repeticaoEmAndamento = false;discoSelecionado = null;ultimoPinoJogado = null;}, jogadas.length * 1000);
+    setTimeout(() => {repeticaoEmAndamento = false;discoSelecionado = null;ultimoPinoJogado = null;}, (jogadas.length + 1) * 1000);
 }
 
 function inicializaPino1(){
