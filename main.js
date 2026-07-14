@@ -4,6 +4,7 @@ const ilustraDiscoSelecionado = document.querySelector(".discoSelecionado");
 const botaoRepetir = document.querySelector("#repetirJogadas");
 let repeticaoEmAndamento = false;
 let discoSelecionado = null;
+let ultimoPinoJogado = null;
 
 function adicionaDisco(pino, tam){
     let disco = document.createElement("div");
@@ -31,7 +32,9 @@ function registraJogada(pino){
         li.setAttribute("pino",3);
     }
     li.textContent = "Disco " + li.getAttribute("disco") + " movido para pino " + li.getAttribute("pino");
-    lista.appendChild(li);
+    if(ultimoPinoJogado != pino){
+        lista.appendChild(li);
+    }
 }
 
 function realizaJogada(pino){
@@ -42,6 +45,7 @@ function realizaJogada(pino){
             discoSelecionado = null;
         }
     }
+    ultimoPinoJogado = pino;
 }
 
 function repeteJogadas(){
@@ -99,7 +103,7 @@ function repeteJogadas(){
         setTimeout(() => {jogada.style.color = "black";}, 1000);
         }, (indice+1)*1000)
     })
-    setTimeout(() => {repeticaoEmAndamento = false;discoSelecionado = null;}, jogadas.length * 1000);
+    setTimeout(() => {repeticaoEmAndamento = false;discoSelecionado = null;ultimoPinoJogado = null;}, jogadas.length * 1000);
 }
 
 function inicializaPino1(){
