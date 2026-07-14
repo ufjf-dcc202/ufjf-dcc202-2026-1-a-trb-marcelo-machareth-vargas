@@ -1,6 +1,7 @@
 const pinos = document.querySelectorAll(".pino");
-const lista = document.querySelector("ol");
+const lista = document.querySelector("#listaJogadas");
 const ilustraDiscoSelecionado = document.querySelector(".discoSelecionado");
+const botaoRepetir = document.querySelector("#repetirJogadas");
 let discoSelecionado = null;
 
 function adicionaDisco(pino, tam){
