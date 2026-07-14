@@ -1,0 +1,14 @@
+.container {
+    display: flex;
+    gap: 0.5%;
+}
+
+.pino {
+    display: flex;
+    flex: 1 1 0%;
+    flex-direction: column-reverse;
+    align-items: center;
+    font-size: 2em;
+    border-style: solid;
+    padding: 0.5%;
+}
