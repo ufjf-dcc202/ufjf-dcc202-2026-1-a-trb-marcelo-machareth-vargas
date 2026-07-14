@@ -1,6 +1,8 @@
 .container {
     display: flex;
     gap: 0.5%;
+    width: 1400px;
+    height: 800px;
 }
 
 .pino {
@@ -12,44 +14,57 @@
     border-style: solid;
     padding: 0.5%;
 }
-[tamanho="1"]{
-    background-color: red;
-    width: 95%;
-    height: 1em;
+
+[tamanho] {
+    font-size: 1em;
+    text-align: center;
+    align-content: center;
 }
 
-[tamanho="2"]{
+[tamanho="1"] {
+    background-color: red;
+    width: 95%;
+    height: 90px;
+}
+
+[tamanho="2"] {
     background-color: green;
     width: 85%;
-    height: 1em;
+    height: 90px;
 }
-[tamanho="3"]{
+
+[tamanho="3"] {
     background-color: blue;
     width: 75%;
-    height: 1em;
+    height: 90px;
 }
-[tamanho="4"]{
+
+[tamanho="4"] {
     background-color: cyan;
     width: 65%;
-    height: 1em;
+    height: 90px;
 }
-[tamanho="5"]{
+
+[tamanho="5"] {
     background-color: yellow;
     width: 55%;
-    height: 1em;
+    height: 90px;
 }
-[tamanho="6"]{
+
+[tamanho="6"] {
     background-color: magenta;
     width: 45%;
-    height: 1em;
+    height: 90px;
 }
-[tamanho="7"]{
+
+[tamanho="7"] {
     background-color: olive;
     width: 35%;
-    height: 1em;
+    height: 90px;
 }
-[tamanho="8"]{
+
+[tamanho="8"] {
     background-color: indigo;
     width: 25%;
-    height: 1em;
+    height: 90px;
 }
