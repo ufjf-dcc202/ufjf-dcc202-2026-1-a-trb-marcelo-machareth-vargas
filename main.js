@@ -1,4 +1,5 @@
 const pinos = document.querySelectorAll(".pino");
+const lista = document.querySelector("ol");
 let discoSelecionado = null;
 
 function adicionaDisco(pino, tam){
@@ -16,6 +17,22 @@ function selecionaDisco(pino){
     } else {
         console.log("discoSelecionado não null.")
     }
+}
+
+function registraJogada(pino){
+    let li = document.createElement("li");
+    li.setAttribute("disco",discoSelecionado.getAttribute("tamanho"));
+    if(pino == pinos[0]){
+        li.setAttribute("pino",1);
+    }
+    if(pino == pinos[1]){
+        li.setAttribute("pino",2);
+    }
+    if(pino == pinos[2]){
+        li.setAttribute("pino",3);
+    }
+    li.textContent = "Disco " + li.getAttribute("disco") + " movido para pino " + li.getAttribute("pino");
+    lista.appendChild(li);
 }
 
 for(let i = 1; i <= 8; i++){
