@@ -44,8 +44,8 @@ function realizaJogada(pino) {
             registraJogada(pino);
             discoSelecionado = null;
         }
+        ultimoPinoJogado = pino;
     }
-    ultimoPinoJogado = pino;
 }
 
 function repeteJogadas() {
