@@ -17,6 +17,7 @@ function selecionaDisco(pino) {
     discoSelecionado = pino.querySelector(":last-child");
     pino.removeChild(pino.lastChild);
     ilustraDiscoSelecionado.appendChild(discoSelecionado);
+    ultimoPinoJogado = pino;
 }
 
 function registraJogada(pino) {
@@ -44,7 +45,6 @@ function realizaJogada(pino) {
             registraJogada(pino);
             discoSelecionado = null;
         }
-        ultimoPinoJogado = pino;
     }
 }
 
